@@ -1,0 +1,18 @@
+@extends ('templates.admin')
+
+@section('content')
+
+    <div class="card">
+        <h5 class="card-header">Productos</h5>
+        <div class="card-body">
+            <h1>{{$product->name}}</h1>
+            <p>{{$product->description}}</p>
+            <img src="/img/productos/{{$product->img}}" alt="" class="img-producto">
+            <p>{{$product->keywords}}</p>
+            <p>${{$product->price}}</p>
+        </div>
+    </div>
+
+    <a href="/admin/productos/{{$product->id}}/edit" class="btn btn-primary btn-block" role="button">Modificar producto</a>
+
+@endsection

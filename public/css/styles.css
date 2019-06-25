@@ -1,0 +1,138 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#about, #restaurante, #productos, #pedidos, #consultas{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/**********************HOME**********************/
+/*HOME MOBILE*/
+.grow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    background-color: black;
+    overflow-y: hidden;
+}
+.grow > a{
+    flex-basis: 20%;
+    flex-shrink: 0;
+    transition: .5s;
+}
+
+.grow:hover > a:hover{
+    opacity: 1;
+}
+
+.grow:hover > a{
+    opacity: 0.5;
+}
+
+.grow > a:hover{
+    flex-basis: 30%;
+}
+
+.logo{
+    height: 100px;
+}
+
+/*HOME DESKTOP*/
+@media (min-width: 992px){
+    .grow{
+        flex-direction: row;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .grow > a:hover{
+    flex-basis: 40%;
+    }
+
+    div.grow a:hover div p {
+        opacity: 1;
+        line-height: 2rem;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+
+    div.grow a:hover div h1 {
+        opacity: 0;
+
+    }
+
+
+    .grow > a:first-child:hover{
+    margin-left: 15%;
+    }
+
+    .grow > a:last-child:hover{
+    margin-right: 15%;
+    }
+
+    .logo{
+        height: 200px;
+    }
+}
+
+/*HOME ALL*/
+div.grow a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.grow a, div.grow a:hover, div.grow a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+div.grow a div{
+    flex-basis: 75%;
+}
+
+div.grow a div p {
+    font-family: 'Kalam', cursive;
+    font-size: 2rem;
+    line-height: 0;
+    opacity: 0;
+}
+
+div.grow a div h1 {
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+}
+
+div.grow a div p, div.grow a div h1{
+text-shadow: 5px 5px 8px #000000, 5px 5px 20px #000000;
+}
+
+
+
+
+/**********************HOME**********************/
+
+.phrase{
+    font-family: 'Kalam', cursive;
+}
+
+.map{
+    position: relative; left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+}
+
