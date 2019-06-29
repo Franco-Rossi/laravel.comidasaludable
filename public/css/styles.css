@@ -2,16 +2,19 @@ html, body{
     height: 100%;
     margin: 0;
     overflow-x: hidden;
+    background-image: url('/img/background/leaves.png');
+    scroll-behavior: smooth;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+    position: relative !important;
 }
 
 #about, #restaurante, #productos, #pedidos, #consultas{
     min-height: 100vh;
     display: flex;
     align-items: center;
+    
 }
 
 
@@ -45,7 +48,13 @@ html {
 }
 
 .logo{
-    height: 100px;
+    padding-top: 5px;
+    height: 20vh;
+    width: auto;
+}
+
+.map{
+    width: 150vw;
 }
 
 /*HOME DESKTOP*/
@@ -55,11 +64,11 @@ html {
         justify-content: center;
         overflow-x: hidden;
     }
-
+    
     .grow > a:hover{
-    flex-basis: 40%;
+        flex-basis: 40%;
     }
-
+    
     div.grow a:hover div p {
         opacity: 1;
         line-height: 2rem;
@@ -69,23 +78,28 @@ html {
         -o-transition: all 0.5s linear;
         transition: all 0.5s linear;
     }
-
-    div.grow a:hover div h1 {
+    
+    div.grow a:hover div h2 {
         opacity: 0;
-
+        
     }
-
-
+    
+    
     .grow > a:first-child:hover{
-    margin-left: 15%;
+        margin-left: 15%;
     }
-
+    
     .grow > a:last-child:hover{
-    margin-right: 15%;
+        margin-right: 15%;
     }
-
+    
     .logo{
-        height: 200px;
+        width: 20vw;
+        height: auto;
+    }
+    
+    .map{
+        width: 100vw;
     }
 }
 
@@ -112,13 +126,18 @@ div.grow a div p {
     opacity: 0;
 }
 
-div.grow a div h1 {
+div.grow a div h2 {
     letter-spacing: 0.3rem;
     font-weight: 600;
 }
 
-div.grow a div p, div.grow a div h1{
-text-shadow: 5px 5px 8px #000000, 5px 5px 20px #000000;
+div.grow a div p, div.grow a div h2{
+    text-shadow: 5px 5px 8px #000000, 5px 5px 20px #000000;
+}
+
+.map{
+    position: relative; left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -130,9 +149,61 @@ text-shadow: 5px 5px 8px #000000, 5px 5px 20px #000000;
     font-family: 'Kalam', cursive;
 }
 
-.map{
-    position: relative; left: 50%;
-    transform: translateX(-50%);
-    width: 1920px;
+#phraseContainer{
+    background-color: #0ca6a991;
+    padding: 10px;
+    border-top-left-radius:2rem;
+    border-bottom-right-radius:2rem;
 }
+
+
+.navbar-light {
+    background-color: #0ca7a9;
+    webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(58, 59, 69, 0.2) !important;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(58, 59, 69, 0.2) !important;
+    padding: 0;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-text {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-light .nav-item.active .nav-link,
+.navbar-light .nav-item:focus .nav-link,
+.navbar-light .nav-item:hover .nav-link {
+    color: #ffffff93;
+}
+
+  .navbar-light .navbar-toggler {
+    color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0);
+  }
+  
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  
+  .navbar-light .navbar-text {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar-light .navbar-text a {
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .navbar-light .navbar-nav .nav-link.active {
+    color: rgb(0, 0, 0);
+  }
+
+  a.nav-link.active { text-decoration: underline; }
 
