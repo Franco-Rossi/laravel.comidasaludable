@@ -51,106 +51,102 @@
     </div>
     
     {{------------------NavBar------------------}}
-
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-            <button class="navbar-toggler text-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-center" id="navbarNav">
-                <ul class="navbar-nav d-flex justify-content-around w-100" >
-                    <li class="nav-item">
-                        <a class="nav-link" href="#restaurante">Restaurante</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#productos">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pedidos">Pedidos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#consultas">Consultas</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <button class="navbar-toggler text-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav d-flex justify-content-around w-100" >
+                <li class="nav-item">
+                    <a class="nav-link" href="#restaurante">Restaurante</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pedidos">Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#consultas">Consultas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     
     {{------------------About------------------}}
     <div id="about">
         <div class="container-fluid text-center">
-            <div class="text mb-5 container" id="phraseContainer">
+            <div class="text mb-5 mt-3 container shadow-lg" id="phraseContainer">
                 <h1 class="phrase mb-3">"No empieces una dieta que terminara algun dia, empieza un estilo de vida que dure para siempre."</h1>
-                {{-- <h4></h4>
-                    <h4></h4> --}}
-                </div>
-                <div class="map">
-                    <a href="https://www.google.com/maps/place/Casa+de+Comida+Saludable,+productos+de+la+Esquina+de+las+Flores/@-34.7625714,-58.3986422,17.75z/data=!4m13!1m7!3m6!1s0x95bcd2eb256d7803:0x60c25f66089a3f91!2sJos%C3%A9+Ignacio+Gorriti+10,+Lomas+de+Zamora,+Buenos+Aires!3b1!8m2!3d-34.7624258!4d-58.3978954!3m4!1s0x0:0xe8006829fe6d08ae!8m2!3d-34.7623112!4d-58.3978218" target="_blank"><img src="img/map.png" alt="" class="shadow-lg border map"></a>
-                    <p>Encontranos en Gorriti 10, Lomas de Zamora.</p>
-                    <button class="loginBtn loginBtn--facebook">
-                        Casa de Comida Saludable
-                    </button>
-                    <button class="loginBtn loginBtn--google">
-                        @casadecomidasaludable
-                    </button>
-                </div>
+            </div>
+            <div class="map mb-3">
+                <p class="phrase container shadow-lg" id="textContainer">Encontranos en Gorriti 10, Lomas de Zamora.</p>
+                <a href="https://www.google.com/maps/place/Casa+de+Comida+Saludable,+productos+de+la+Esquina+de+las+Flores/@-34.7625714,-58.3986422,17.75z/data=!4m13!1m7!3m6!1s0x95bcd2eb256d7803:0x60c25f66089a3f91!2sJos%C3%A9+Ignacio+Gorriti+10,+Lomas+de+Zamora,+Buenos+Aires!3b1!8m2!3d-34.7624258!4d-58.3978954!3m4!1s0x0:0xe8006829fe6d08ae!8m2!3d-34.7623112!4d-58.3978218" target="_blank"><img src="img/map.png" alt="" class="shadow-lg border map"></a>
+            </div>
+            <div>
+                    <a href="#" class="shadow-lg"><i class="fab fa-facebook-f align-middle"></i></a>
+                    <a href="#" class="shadow-lg"><i class="fab fa-instagram align-middle align-self-center"></i></a>
             </div>
         </div>
-        
-        
-        {{------------------Restaurante------------------}}
-        
-        <div id="restaurante">
-            <div class="container-fluid text-center mt-5">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-                
-                
-            </div>
-        </div>
-        
-        
-        {{------------------Productos------------------}}
-        <div id="productos">
-            <div class="container-fluid text-center mt-5">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-                
-                
-            </div>
-        </div>
-        
-        
-        {{------------------Pedidos------------------}}
-        <div id="pedidos">
-            <div class="container-fluid text-center mt-5">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-                
-                
-            </div>
-        </div>
-        
-        
-        {{------------------Consultas------------------}}
-        <div id="consultas">
-            <div class="container-fluid text-center mt-5">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-                
-                
-            </div>
-        </div>
-        
-        
-        
-        
-        
-        
-        <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
-        
-        <script src="{{ URL::asset('js/pages.js') }}"></script>
-        
-    </body>
+    </div>
     
-    </html>
+    
+    {{------------------Restaurante------------------}}
+    
+    <div id="restaurante">
+        <div class="container-fluid text-center mt-5">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+            
+            
+        </div>
+    </div>
+    
+    
+    {{------------------Productos------------------}}
+    <div id="productos">
+        <div class="container-fluid text-center mt-5">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+            
+            
+        </div>
+    </div>
+    
+    
+    {{------------------Pedidos------------------}}
+    <div id="pedidos">
+        <div class="container-fluid text-center mt-5">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+            
+            
+        </div>
+    </div>
+    
+    
+    {{------------------Consultas------------------}}
+    <div id="consultas">
+        <div class="container-fluid text-center mt-5">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+            
+            
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
+    
+    <script src="{{ URL::asset('js/pages.js') }}"></script>
+    
+</body>
+
+</html>
