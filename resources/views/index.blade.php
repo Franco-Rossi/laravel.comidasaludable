@@ -101,7 +101,7 @@
     {{------------------Restaurante------------------}}
     
     <div id="restaurante">
-        <div class="container-fluid text-center mt-5 shadow-lg">
+        <div class="container-fluid text-center mt-5">
             <div class="container phrase box rounded-top-both">
                 <h1>Comida rica y saludable que elaboramos en nuestra casa.</h1>
             </div>
@@ -150,7 +150,7 @@
                         <div class="col-md-12">
                             <div class="row justify-content-between">
                                 @foreach ($products as $product)
-                                <div class="col-4 col-md-2 py-3">
+                                <div class="col-4 col-lg-2 py-3">
                                     <div class="product box rounded-lg shadow-lg">
                                         <img src="{{URL::asset("img/productos/{$product->img}.jpg")}}"" alt="" class="img-fluid">
                                         <h5 class="card-title text-white">{{$product->name}}</h5>

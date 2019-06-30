@@ -6,13 +6,14 @@ use App\Food;
 use App\Image;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
     public function home()
     {
         $foods = Food::all();
-        $products = Product::all();
+        $products = DB::table('products')->paginate(6);
         return view('index', compact('foods', 'products'));
     }
 
