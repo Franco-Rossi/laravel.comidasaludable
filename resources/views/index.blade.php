@@ -11,7 +11,11 @@
     {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"--}}
     <link href="https://fonts.googleapis.com/css?family=Kalam|Kanit:800" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="{{ URL::asset('slick/slick.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('slick/slick-theme.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/styles.css') }}" rel="stylesheet">
+    
 </head>
 <body data-spy="scroll" data-target=".navbar">
     
@@ -83,23 +87,50 @@
             <div class="text mb-5 mt-3 container shadow-lg" id="phraseContainer">
                 <h1 class="phrase mb-3">"No empieces una dieta que terminara algun dia, empieza un estilo de vida que dure para siempre."</h1>
             </div>
-            <div class="map mb-3">
-                <p class="phrase container shadow-lg" id="textContainer">Encontranos en Gorriti 10, Lomas de Zamora.</p>
+            <div class="mb-3">
+                <p class="phrase container shadow-lg box rounded-top-both">Encontranos en Gorriti 10, Lomas de Zamora.</p>
                 <a href="https://www.google.com/maps/place/Casa+de+Comida+Saludable,+productos+de+la+Esquina+de+las+Flores/@-34.7625714,-58.3986422,17.75z/data=!4m13!1m7!3m6!1s0x95bcd2eb256d7803:0x60c25f66089a3f91!2sJos%C3%A9+Ignacio+Gorriti+10,+Lomas+de+Zamora,+Buenos+Aires!3b1!8m2!3d-34.7624258!4d-58.3978954!3m4!1s0x0:0xe8006829fe6d08ae!8m2!3d-34.7623112!4d-58.3978218" target="_blank"><img src="img/map.png" alt="" class="shadow-lg border map"></a>
             </div>
             <div>
-                    <a href="#" class="shadow-lg"><i class="fab fa-facebook-f align-middle"></i></a>
-                    <a href="#" class="shadow-lg"><i class="fab fa-instagram align-middle align-self-center"></i></a>
+                <a href="#" class="shadow-lg"><i class="fab fa-facebook-f align-middle"></i></a>
+                <a href="#" class="shadow-lg"><i class="fab fa-instagram align-middle"></i></a>
             </div>
         </div>
     </div>
     
-    
     {{------------------Restaurante------------------}}
     
     <div id="restaurante">
-        <div class="container-fluid text-center mt-5">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+        <div class="container-fluid text-center mt-5 shadow-lg">
+            <div class="container phrase box rounded-top-both">
+                <h1>Comida rica y saludable que elaboramos en nuestra casa.</h1>
+            </div>
+            <div class="box rounded-bottom-both image-box container" >
+                <h2 class="phrase">Platos principales</h2>
+                <div class="slideShow container-fluid">
+                    @foreach ($foods as $food)
+                    @if ($food->type === 0)
+                    <div><img src="{{URL::asset("img/comida/{$food->img}.jpg")}}"" alt="" class="img-fluid shadow food rounded-lg"> </div>
+                    @endif
+                    @endforeach
+                </div>
+                <h2 class="phrase">Tartas</h2>
+                <div class="slideShow container">
+                    @foreach ($foods as $food)
+                    @if ($food->type === 1)
+                    <div><img src="{{URL::asset("img/comida/{$food->img}.jpg")}}"" alt="" class="img-fluid shadow food rounded-lg"></div>
+                    @endif
+                    @endforeach
+                </div>
+                <h2 class="phrase">Postres</h2>
+                <div class="slideShow container">
+                    @foreach ($foods as $food)
+                    @if ($food->type === 2)
+                    <div><img src="{{URL::asset("img/comida/{$food->img}.jpg")}}"" alt="" class="img-fluid shadow food rounded-lg"></div>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
             
             
         </div>
@@ -107,46 +138,76 @@
     
     
     {{------------------Productos------------------}}
-    <div id="productos">
-        <div class="container-fluid text-center mt-5">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+    <div class="" id="productos">
+        <div class="container-fluid">
+            <div class="text mt-5 container shadow-lg text-center " id="phraseContainer">
+                <h2 class="phrase">Productos organicos, naturales e integrales. Cortesia de La Esquina de las Flores.</h1>
+            </div>
             
-            
-        </div>
-    </div>
-    
-    
-    {{------------------Pedidos------------------}}
-    <div id="pedidos">
-        <div class="container-fluid text-center mt-5">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-            
-            
-        </div>
-    </div>
-    
-    
-    {{------------------Consultas------------------}}
-    <div id="consultas">
-        <div class="container-fluid text-center mt-5">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-            
-            
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    
-    <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
-    
-    <script src="{{ URL::asset('js/pages.js') }}"></script>
-    
-</body>
+            <div>
+                <div class="container">
+                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="row justify-content-between">
+                                @foreach ($products as $product)
+                                <div class="col-4 col-md-2 py-3">
+                                    <div class="product box rounded-lg shadow-lg">
+                                        <img src="{{URL::asset("img/productos/{$product->img}.jpg")}}"" alt="" class="img-fluid">
+                                        <h5 class="card-title text-white">{{$product->name}}</h5>
+                                        <p class="card-text text-white d-none d-lg-inline">{{$product->description}}</p>
+                                    </div>
+                                </div>
 
-</html>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        
+        
+        {{------------------Pedidos------------------}}
+        <div id="pedidos">
+            <div class="container-fluid text-center mt-5">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+                
+                
+            </div>
+        </div>
+        
+        
+        {{------------------Consultas------------------}}
+        <div id="consultas">
+            <div class="container-fluid text-center mt-5">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
+                
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
+        
+        
+        <script src="{{ URL::asset('slick/slick.min.js') }}"></script>    
+        <script src="{{ URL::asset('js/pages.js') }}"></script>
+        
+        <script type="text/javascript">
+            
+        </script>
+        
+    </body>
+    
+    </html>

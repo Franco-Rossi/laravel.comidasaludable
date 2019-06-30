@@ -55,6 +55,7 @@ body{
 
 .map{
     width: 150vw;
+    margin-top: -18px;
 }
 
 /*HOME DESKTOP*/
@@ -158,12 +159,23 @@ div.grow a div p, div.grow a div h2{
     border-bottom-right-radius:2rem;
 }
 
-#textContainer{
+ .box{
     background-color: #0ca93391;
     padding: 10px;
+}
+
+.food{
+    max-height: 150px;
+}
+
+.rounded-top-both{
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
-    margin-bottom: -5px;
+}
+
+.rounded-bottom-both{
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
 }
 
 .fab {
@@ -174,6 +186,7 @@ div.grow a div p, div.grow a div h2{
     height: 100px;
     width: 100px;
     padding-top: 35px;
+    border-radius: 50%;
   }
   
   .fab:hover {
@@ -199,7 +212,6 @@ div.grow a div p, div.grow a div h2{
 
 .navbar-light {
     background-color: #0ca7a9;
-    webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(58, 59, 69, 0.2) !important;
     box-shadow: 0 0.125rem 0.25rem 0 rgba(58, 59, 69, 0.2) !important;
     padding: 0;
 }

@@ -11,13 +11,13 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $images = Image::all();
-        return view('index', compact('images'));
+        $foods = Food::all();
+        $products = Product::all();
+        return view('index', compact('foods', 'products'));
     }
 
     public function restaurante()
     {
-        $images = Image::all();
         $foods = Food::all();
         return view('restaurante', compact('foods', 'images'));
     }
