@@ -206,6 +206,24 @@ div.grow a div p, div.grow a div h2{
       padding-top: 25px;
       transition: all 0.2s linear;
   }
+
+  .fab-mini {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    padding-top: 20px;
+    border-radius: 50%;
+  }
+  
+  .fab-mini:hover {
+      opacity: 0.8;
+      font-size: 30px;
+      padding-top: 15px;
+      transition: all 0.2s linear;
+  }
   
   .fa-facebook-f {
     background: #3B5998;
@@ -268,6 +286,21 @@ div.grow a div p, div.grow a div h2{
     transition: all 0.2s linear;
   }
 
+  #buttonCyan{
+    padding: 10px;
+    background-color: #078688;
+    transition: all 0.2s linear;
+    border-top-left-radius:2rem;
+    border-bottom-right-radius:2rem;
+  }
+
+  #buttonCyan:hover{
+    background-color: #43a7a8;
+    transition: all 0.2s linear;
+  }
+
+
+
   #pedidosYa{
     background-color: #ff55c699;
   }
@@ -277,12 +310,13 @@ div.grow a div p, div.grow a div h2{
   }
 
   #contactInfo{
-    background-color: #0ca6a999;
+    background-color: #0ca93399 !important
 
   }
 
   #contactForm{
-    background-color: #0ca93399;
+    background-color: #0ca6a999;
+    
 
   }
 

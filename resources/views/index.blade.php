@@ -169,18 +169,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
         
         {{------------------Pedidos------------------}}
         
         <div id="pedidos">
-            <div class="container text-center text-white">
+            <div class="container text-center text-white mt-4">
                 <div class="row d-md-none"> {{-- MOBILE --}}
                     <div class="col-12 mb-1">
                         <div class="rounded-top-both p-3" id="pedidosYa">
                             <h1>Encontranos en</h1>
                             <img src="/img/pedidosya.png" alt="" class=" img-fluid logo">
-                            <h2>Buscanos por el nombre de Casa de Comida Saludable</h2>
+                            <h4>Buscanos por el nombre de</h4>
+                            <h2>Casa de Comida Saludable</h2>
                             
                         </div>
                     </div>
@@ -190,7 +191,7 @@
                                 <h2>4244 5048</h2>
                                 <h4>o via Whatsapp al</h3>
                                     <h2>+54 11 41937119</h2>
-                                    <hr>
+                                    <hr class="mx-3">
                                     <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
                                 </div>
                             </div>
@@ -200,17 +201,18 @@
                             <div class="col-8 px-1">
                                 <div class="rounded-left-both h-100 p-3" id="pedidosYa">
                                     <h1>Encontranos en</h1>
-                                    <img src="/img/pedidosya.png" alt="" class=" img-fluid logo">
-                                    <h2>Buscanos por el nombre de Casa de Comida Saludable</h2>
+                                    <img src="/img/pedidosya.png" alt="" class=" img-fluid logo mb-3">
+                                    <h4>Buscanos por el nombre de</h4>
+                                    <h2>Casa de Comida Saludable</h2>
                                 </div>
                             </div>
                             <div class="col-4 px-1">
-                                <div class="rounded-right-both h-100 p-3" id="entregas">
+                                <div class="rounded-right-both h-100 p-3 d-flex justify-content-center flex-column" id="entregas">
                                     <h4>Podes comunicarte con nosotros llamandonos al</h3>
                                         <h2>4244 5048</h2>
                                         <h4>o via Whatsapp al</h3>
                                             <h2>+54 11 41937119</h2>
-                                            <hr>
+                                            <hr class="mx-3">
                                             <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
                                         </div>
                                     </div>
@@ -218,34 +220,62 @@
                             </div>
                         </div>
                         
-                        {{------------------Consultas------------------}}
+     {{------------------Consultas------------------}}
                         
                         <div id="consultas">
-                            <div class="container">
+                            <div class="container text-center text-white mt-4">
                                 <div class="row d-md-none"> {{-- MOBILE --}}
                                     <div class="col-12 mb-1">
-                                        <div class="rounded-top-both bg-info p-3" id="contactInfo">
-                                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, modi?</h2>
+                                        <div class="rounded-top-both p-3" id="contactInfo">
+                                            <h2>¡Dejanos tu mensaje!</h2>
+                                            <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
+                                            <a href="#" class="shadow-lg"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
+                                            <a href="#" class="shadow-lg"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="rounded-bottom-both p-3" id="contactForm">
-                                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos minima fugit iusto possimus reprehenderit!</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, neque dicta. Suscipit earum et excepturi eaque veritatis laboriosam ut quam?</p>
+                                                <form action="" class="mx-5">
+                                                        <div class="form-group">
+                                                                <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
+                                                </form>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="d-none d-md-flex row"> {{-- DESKTOP --}}
                                     <div class="col-4 px-1">
-                                        <div class="rounded-left-both h-100 p-3" id="contactInfo">
-                                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos minima fugit iusto possimus reprehenderit!</h3>
+                                        <div class="rounded-left-both h-100 p-3 d-flex justify-content-center flex-column" id="contactInfo">
+                                            <div class="">
+                                                <h2>¡Dejanos tu mensaje!</h2>
+                                                <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
+                                                <a href="#" class="shadow-lg"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
+                                                <a href="#" class="shadow-lg"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
+                                            </div>
                                         </div>
                                     </div>  
                                     <div class="col-8 px-1">
                                         <div class="rounded-right-both h-100 p-3" id="contactForm">
-                                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, modi?</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, neque dicta. Suscipit earum et excepturi eaque veritatis laboriosam ut quam?</p>
+                                            <form action="" class="mx-5">
+                                                <div class="form-group">
+                                                        <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
+                                                </div>
+                                                <div class="form-group">
+                                                        <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
+                                                </div>
+                                                <div class="form-group">
+                                                        <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
+                                        </form>
                                         </div>
                                         
                                     </div>
