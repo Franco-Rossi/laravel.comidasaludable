@@ -82,13 +82,14 @@
     </nav>
     
     {{------------------About------------------}}
+    
     <div id="about">
         <div class="container-fluid text-center">
             <div class="text mb-5 mt-3 container shadow-lg" id="phraseContainer">
                 <h1 class="phrase mb-3">"No empieces una dieta que terminara algun dia, empieza un estilo de vida que dure para siempre."</h1>
             </div>
-            <div class="mb-3">
-                <p class="phrase container shadow-lg box rounded-top-both">Encontranos en Gorriti 10, Lomas de Zamora.</p>
+            <div class="mb-3 phrase">
+                <p class="container shadow-lg box rounded-top-both">Encontranos en Gorriti 10, Lomas de Zamora.</p>
                 <a href="https://www.google.com/maps/place/Casa+de+Comida+Saludable,+productos+de+la+Esquina+de+las+Flores/@-34.7625714,-58.3986422,17.75z/data=!4m13!1m7!3m6!1s0x95bcd2eb256d7803:0x60c25f66089a3f91!2sJos%C3%A9+Ignacio+Gorriti+10,+Lomas+de+Zamora,+Buenos+Aires!3b1!8m2!3d-34.7624258!4d-58.3978954!3m4!1s0x0:0xe8006829fe6d08ae!8m2!3d-34.7623112!4d-58.3978218" target="_blank"><img src="img/map.png" alt="" class="shadow-lg border map"></a>
             </div>
             <div>
@@ -102,8 +103,8 @@
     
     <div id="restaurante">
         <div class="container-fluid text-center mt-5">
-            <div class="container phrase box rounded-top-both">
-                <h1>Comida rica y saludable que elaboramos en nuestra casa.</h1>
+            <div class="container box rounded-top-both">
+                <h1 class="phrase">Comida rica y saludable que elaboramos en nuestra casa.</h1>
             </div>
             <div class="box rounded-bottom-both image-box container" >
                 <h2 class="phrase">Platos principales</h2>
@@ -114,7 +115,7 @@
                     @endif
                     @endforeach
                 </div>
-                <h2 class="phrase">Tartas</h2>
+                <h2 class="phrase mt-3">Tartas</h2>
                 <div class="slideShow container">
                     @foreach ($foods as $food)
                     @if ($food->type === 1)
@@ -122,7 +123,7 @@
                     @endif
                     @endforeach
                 </div>
-                <h2 class="phrase">Postres</h2>
+                <h2 class="phrase mt-3">Postres</h2>
                 <div class="slideShow container">
                     @foreach ($foods as $food)
                     @if ($food->type === 2)
@@ -136,78 +137,140 @@
         </div>
     </div>
     
-    
     {{------------------Productos------------------}}
+    
     <div class="" id="productos">
         <div class="container-fluid">
             <div class="text mt-5 container shadow-lg text-center " id="phraseContainer">
-                <h2 class="phrase">Productos organicos, naturales e integrales. Cortesia de La Esquina de las Flores.</h1>
-            </div>
-            
-            <div>
-                <div class="container">
-                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="row justify-content-between">
-                                @foreach ($products as $product)
-                                <div class="col-4 col-lg-2 py-3">
-                                    <div class="product box rounded-lg shadow-lg">
-                                        <img src="{{URL::asset("img/productos/{$product->img}.jpg")}}"" alt="" class="img-fluid">
-                                        <h5 class="card-title text-white">{{$product->name}}</h5>
-                                        <p class="card-text text-white d-none d-lg-inline">{{$product->description}}</p>
+                <h2 class="phrase">Productos organicos, naturales e integrales de La Esquina de las Flores.</h1>
+                </div>
+                
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row justify-content-between">
+                                    @foreach ($products as $product)
+                                    <div class="col-4 col-lg-2 py-3">
+                                        <div class="product box rounded-lg shadow-lg h-100 text-center">
+                                            <img src="{{URL::asset("img/productos/{$product->img}.jpg")}}"" alt="" class="img-fluid">
+                                            <h5 class="card-title text-white">{{$product->name}}</h5>
+                                            <hr class="mx-5 d-none d-lg-flex">
+                                            <p class="card-text text-white d-none d-lg-inline">{{$product->description}}</p>
+                                        </div>
                                     </div>
+                                    @endforeach
                                 </div>
-
-                                @endforeach
                             </div>
                         </div>
+                        
+                        <a name="" id="buttonGreen" class="btn btn-block rounded-pill shadow-lg" href="#" role="button"><h4 class="phrase">Ver mas productos</h4></a>
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-
-        
         
         {{------------------Pedidos------------------}}
+        
         <div id="pedidos">
-            <div class="container-fluid text-center mt-5">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-                
-                
-            </div>
-        </div>
-        
-        
-        {{------------------Consultas------------------}}
-        <div id="consultas">
-            <div class="container-fluid text-center mt-5">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur dolorum eveniet facere quod temporibus?</h1>
-                
-                
-            </div>
-        </div>
-        
-        
-        
-        
-        
-        
-        <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
-        
-        
-        <script src="{{ URL::asset('slick/slick.min.js') }}"></script>    
-        <script src="{{ URL::asset('js/pages.js') }}"></script>
-        
-        <script type="text/javascript">
-            
-        </script>
-        
-    </body>
-    
-    </html>
+            <div class="container text-center text-white">
+                <div class="row d-md-none"> {{-- MOBILE --}}
+                    <div class="col-12 mb-1">
+                        <div class="rounded-top-both p-3" id="pedidosYa">
+                            <h1>Encontranos en</h1>
+                            <img src="/img/pedidosya.png" alt="" class=" img-fluid logo">
+                            <h2>Buscanos por el nombre de Casa de Comida Saludable</h2>
+                            
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="rounded-bottom-both p-3" id="entregas">
+                            <h4>Podes comunicarte con nosotros llamandonos al</h3>
+                                <h2>4244 5048</h2>
+                                <h4>o via Whatsapp al</h3>
+                                    <h2>+54 11 41937119</h2>
+                                    <hr>
+                                    <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-none d-md-flex row"> {{-- DESKTOP --}}
+                            <div class="col-8 px-1">
+                                <div class="rounded-left-both h-100 p-3" id="pedidosYa">
+                                    <h1>Encontranos en</h1>
+                                    <img src="/img/pedidosya.png" alt="" class=" img-fluid logo">
+                                    <h2>Buscanos por el nombre de Casa de Comida Saludable</h2>
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="rounded-right-both h-100 p-3" id="entregas">
+                                    <h4>Podes comunicarte con nosotros llamandonos al</h3>
+                                        <h2>4244 5048</h2>
+                                        <h4>o via Whatsapp al</h3>
+                                            <h2>+54 11 41937119</h2>
+                                            <hr>
+                                            <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {{------------------Consultas------------------}}
+                        
+                        <div id="consultas">
+                            <div class="container">
+                                <div class="row d-md-none"> {{-- MOBILE --}}
+                                    <div class="col-12 mb-1">
+                                        <div class="rounded-top-both bg-info p-3" id="contactInfo">
+                                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, modi?</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="rounded-bottom-both p-3" id="contactForm">
+                                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos minima fugit iusto possimus reprehenderit!</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, neque dicta. Suscipit earum et excepturi eaque veritatis laboriosam ut quam?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-none d-md-flex row"> {{-- DESKTOP --}}
+                                    <div class="col-4 px-1">
+                                        <div class="rounded-left-both h-100 p-3" id="contactInfo">
+                                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dignissimos minima fugit iusto possimus reprehenderit!</h3>
+                                        </div>
+                                    </div>  
+                                    <div class="col-8 px-1">
+                                        <div class="rounded-right-both h-100 p-3" id="contactForm">
+                                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, modi?</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, neque dicta. Suscipit earum et excepturi eaque veritatis laboriosam ut quam?</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                        {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
+                        
+                        
+                        <script src="{{ URL::asset('slick/slick.min.js') }}"></script>    
+                        <script src="{{ URL::asset('js/pages.js') }}"></script>
+                        
+                        <script type="text/javascript">
+                            
+                        </script>
+                        
+                    </body>
+                    
+                    </html>

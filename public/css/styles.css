@@ -150,17 +150,18 @@ div.grow a div p, div.grow a div h2{
     font-family: 'Kalam', cursive;
     color: white;
     text-shadow: 4px 2px 9px rgba(0,0,0,0.47);
+    margin: 0;
 }
 
 #phraseContainer{
-    background-color: #0ca6a991;
+    background-color: #0ca6a999;
     padding: 10px;
     border-top-left-radius:2rem;
     border-bottom-right-radius:2rem;
 }
 
  .box{
-    background-color: #0ca93391;
+    background-color: #0ca93399 !important;
     padding: 10px;
 }
 
@@ -175,6 +176,16 @@ div.grow a div p, div.grow a div h2{
 
 .rounded-bottom-both{
     border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.rounded-left-both{
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.rounded-right-both{
+    border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
 }
 
@@ -214,6 +225,7 @@ div.grow a div p, div.grow a div h2{
     background-color: #0ca7a9;
     box-shadow: 0 0.125rem 0.25rem 0 rgba(58, 59, 69, 0.2) !important;
     padding: 0;
+    margin: 0;
 }
 
 .navbar-light .navbar-brand,
@@ -238,6 +250,40 @@ div.grow a div p, div.grow a div h2{
   
   .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .text-white{
+    text-shadow: 4px 2px 9px rgba(0,0,0,0.47);
+  }
+
+  #buttonGreen{
+    padding: 10px;
+    background-color: #0ca933 !important;
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+
+  #buttonGreen:hover{
+    opacity: 0.8;
+    transition: all 0.2s linear;
+  }
+
+  #pedidosYa{
+    background-color: #ff55c699;
+  }
+
+  #entregas{
+    background-color: #ff990099;
+  }
+
+  #contactInfo{
+    background-color: #0ca6a999;
+
+  }
+
+  #contactForm{
+    background-color: #0ca93399;
+
   }
 
 
