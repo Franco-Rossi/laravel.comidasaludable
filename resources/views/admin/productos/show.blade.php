@@ -7,9 +7,8 @@
         <div class="card-body">
             <h1>{{$product->name}}</h1>
             <p>{{$product->description}}</p>
-            <img src="/img/productos/{{$product->img}}.jpg" alt="" class="img-producto">
+            <img src="{{url('img/productos/'.$product->filename)}}" alt="" class="img-producto">
             <p>{{$product->keywords}}</p>
-            <p>${{$product->price}}</p>
         </div>
     </div>
 

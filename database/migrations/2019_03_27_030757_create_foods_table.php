@@ -17,9 +17,10 @@ class CreateFoodsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description');
-            $table->string('img')->nullable();
+            $table->string('filename')->nullable();
+            $table->string('mime')->nullable();
+            $table->string('original_filename')->nullable();
             $table->Integer('type');
-            $table->decimal('price','8','2');
             $table->timestamps();
         });
     }

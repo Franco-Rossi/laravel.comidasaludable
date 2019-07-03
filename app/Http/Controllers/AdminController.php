@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Image;
 use App\Food;
 use App\Product;
 use Illuminate\Http\Request;
@@ -28,14 +27,7 @@ class AdminController extends Controller
     {
         $foods = Food::all();
         $products = Product::all();
-        $images = Image::all();
         return view('admin.index', compact('foods', 'products', 'images'));
-    }
-
-    public function home()
-    {
-        $images = Image::all();
-        return view('admin.home', compact('images'));
     }
 
     public function restaurante()
@@ -48,13 +40,4 @@ class AdminController extends Controller
         return view('admin.productos');
     }
 
-    public function pedidos()
-    {
-        return view('admin.pedidos');
-    }
-
-    public function consultas()
-    {
-        return view('admin.consultas');
-    }
 }

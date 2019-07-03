@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
@@ -36,12 +37,31 @@ class ProductsController extends Controller
     public function update($id){
         $product = Product::findOrFail($id);
 
+        request()->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        if(request('img') != null){
+             $img_name = request()->file('img');
+            $extension = $img_name->getClientOriginalExtension();
+            Storage::disk('public_product')->put($img_name->getFilename().'.'.$extension,  File::get($img_name));
+
+            
+            $productImage = public_path("/img/productos/{$product->filename}");
+            if(file_exists($productImage)){
+                unlink($productImage);
+            }
+
+            
+            $product->mime = $img_name->getClientMimeType();
+            $product->original_filename = $img_name->getClientOriginalName();
+            $product->filename = $img_name->getFilename().'.'.$extension;
+        }
+
         $product->name = request('name');
         $product->description = request('description');
-        $product->img = request('img');
         $product->keywords = request('keywords');
-        $product->price = request('price');
-
         $product->save();
 
         return redirect('/admin/productos');
@@ -57,13 +77,26 @@ class ProductsController extends Controller
 
 
     public function store(){
+
+        request()->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'img' => 'required',
+        ]);
+
+        $img_name = request()->file('img');
+        $extension = $img_name->getClientOriginalExtension();
+        Storage::disk('public_product')->put($img_name->getFilename().'.'.$extension,  File::get($img_name));
+
+
         $product = new Product();
 
         $product->name = request('name');
         $product->description = request('description');
-        $product->img = request('img');
+        $product->mime = $img_name->getClientMimeType();
+        $product->original_filename = $img_name->getClientOriginalName();
+        $product->filename = $img_name->getFilename().'.'.$extension;
         $product->keywords = request('keywords');
-        $product->price = request('price');
 
         $product->save();
 

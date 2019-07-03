@@ -57,12 +57,26 @@ class FoodsController extends Controller
 
 
     public function store(){
+
+        request()->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'img' => 'required',
+            'type' => 'required',
+        ]);
+
+        $img_name = request()->file('img');
+        $extension = $img_name->getClientOriginalExtension();
+        Storage::disk('public_food')->put($img_name->getFilename().'.'.$extension,  File::get($img_name));
+
+
         $food = new Food();
 
         $food->name = request('name');
         $food->description = request('description');
-        $food->img = request('img');
-        $food->price = request('price');
+        $food->mime = $img_name->getClientMimeType();
+        $food->original_filename = $img_name->getClientOriginalName();
+        $food->filename = $img_name->getFilename().'.'.$extension;
         $food->type = request('type');
 
         $food->save();

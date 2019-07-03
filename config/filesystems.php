@@ -48,10 +48,17 @@ return [
             'root' => storage_path('app'),
         ],
 
-        'public' => [
+        'public_product' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'root'   => public_path() . '/img/productos',
+            'url' => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
+
+        'public_food' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/img/comida',
+            'url' => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
 
