@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label for="type">Tipo</label>
-                    <input type="number" class="form-control" name='type' id="type" placeholder="Ingrese el tipo de comida!">
+                    <input type="number" class="form-control" name='type' id="type" placeholder="Ingrese el tipo de plato" value="{{$food->type}}">
                 </div>
                 <div class="form-group">
                     <label for="price">Precio</label>
@@ -30,7 +30,7 @@
                 </div>
                 <button type="submit" class="btn btn-success btn-lg">Modificar articulo</button>
             </form>
-            <form method="POST" action="/admin/restaurante/{{$food->id}}">
+            <form method="POST" action="/admin/comida/{{$food->id}}">
                 @method('DELETE')
                 @csrf
                 <button type="submit" class="btn btn-danger mt-2">Eliminar articulo</button>
