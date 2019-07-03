@@ -93,8 +93,8 @@
                 <a href="https://www.google.com/maps/place/Casa+de+Comida+Saludable,+productos+de+la+Esquina+de+las+Flores/@-34.7625714,-58.3986422,17.75z/data=!4m13!1m7!3m6!1s0x95bcd2eb256d7803:0x60c25f66089a3f91!2sJos%C3%A9+Ignacio+Gorriti+10,+Lomas+de+Zamora,+Buenos+Aires!3b1!8m2!3d-34.7624258!4d-58.3978954!3m4!1s0x0:0xe8006829fe6d08ae!8m2!3d-34.7623112!4d-58.3978218" target="_blank"><img src="img/map.png" alt="" class="shadow-lg border map"></a>
             </div>
             <div>
-                <a href="#" class="shadow-lg"><i class="fab fa-facebook-f align-middle"></i></a>
-                <a href="#" class="shadow-lg"><i class="fab fa-instagram align-middle"></i></a>
+                <a href="https://www.facebook.com/conproductosdelaesquinadelasflores/" class="shadow-lg" target="_blank"><i class="fab fa-facebook-f align-middle"></i></a>
+                <a href="https://www.instagram.com/casadecomidasaludable/" class="shadow-lg" target="_blank"><i class="fab fa-instagram align-middle"></i></a>
             </div>
         </div>
     </div>
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                         
-                        <a name="" id="buttonGreen" class="btn btn-block rounded-pill shadow-lg" href="#" role="button"><h4 class="phrase">Ver mas productos</h4></a>
+                        <a name="" id="buttonGreen" class="btn btn-block rounded-pill shadow-lg" href="/productos" role="button"><h4 class="phrase">Ver mas productos</h4></a>
                         
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                     <div class="col-12 mb-1">
                         <div class="rounded-top-both p-3" id="pedidosYa">
                             <h1>Encontranos en</h1>
-                            <img src="/img/pedidosya.png" alt="" class=" img-fluid logo">
+                            <a href="https://www.pedidosya.com.ar/restaurantes/lomas-de-zamora/casa-de-comidas-saludable-vegetariana-menu"><img src="/img/pedidosya.png" alt="" class=" img-fluid logo"></a>
                             <h4>Buscanos por el nombre de</h4>
                             <h2>Casa de Comida Saludable</h2>
                             
@@ -201,7 +201,7 @@
                             <div class="col-8 px-1">
                                 <div class="rounded-left-both h-100 p-3" id="pedidosYa">
                                     <h1>Encontranos en</h1>
-                                    <img src="/img/pedidosya.png" alt="" class=" img-fluid logo mb-3">
+                                    <a href="https://www.pedidosya.com.ar/restaurantes/lomas-de-zamora/casa-de-comidas-saludable-vegetariana-menu" target="_blank"><img src="/img/pedidosya.png" alt="" class=" img-fluid logo"></a>
                                     <h4>Buscanos por el nombre de</h4>
                                     <h2>Casa de Comida Saludable</h2>
                                 </div>
@@ -229,8 +229,8 @@
                                         <div class="rounded-top-both p-3" id="contactInfo">
                                             <h2>¡Dejanos tu mensaje!</h2>
                                             <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
-                                            <a href="#" class="shadow-lg"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
-                                            <a href="#" class="shadow-lg"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
+                                            <a href="https://www.facebook.com/conproductosdelaesquinadelasflores/" class="shadow-lg" target="_blank"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
+                                            <a href="https://www.instagram.com/casadecomidasaludable/" class="shadow-lg" target="_blank"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -257,8 +257,8 @@
                                             <div class="">
                                                 <h2>¡Dejanos tu mensaje!</h2>
                                                 <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
-                                                <a href="#" class="shadow-lg"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
-                                                <a href="#" class="shadow-lg"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
+                                                <a href="https://www.facebook.com/conproductosdelaesquinadelasflores/" class="shadow-lg" target="_blank"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
+                                                <a href="https://www.instagram.com/casadecomidasaludable/" class="shadow-lg" target="_blank"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
                                             </div>
                                         </div>
                                     </div>  
