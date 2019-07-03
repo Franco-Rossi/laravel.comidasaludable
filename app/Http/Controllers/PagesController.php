@@ -23,19 +23,19 @@ class PagesController extends Controller
         return view('restaurante', compact('foods'));
     }
 
-    public function productos()
+    /* public function productos()
     {
         $products = DB::table('products')->paginate(6);
         return view('productos', compact('products'));
-    }
+    } */
 
-    public function search(Request $request){
+    public function productos(Request $request){
 
             $q = Input::get ( 'q' );
             $products = Product::where('name','LIKE','%'.$q.'%')->orWhere('description','LIKE','%'.$q.'%')->orWhere('keywords','LIKE','%'.$q.'%')->paginate(6);
             if(count($products) > 0)
                 return view('productos', compact('products'));
-            else return view ('productos')->withMessage('No se ha encontrado ningun producto, por favor busque de nuevo.');
+            else return view ('productos')->withMessage('No se ha encontrado ningun producto, por favor busque otro termino.');
         }
 
     public function pedidos()

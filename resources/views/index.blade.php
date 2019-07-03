@@ -131,9 +131,7 @@
                     @endif
                     @endforeach
                 </div>
-            </div>
-            
-            
+            </div>  
         </div>
     </div>
     
@@ -143,164 +141,157 @@
         <div class="container-fluid">
             <div class="text mt-5 container shadow-lg text-center " id="phraseContainer">
                 <h2 class="phrase">Productos organicos, naturales e integrales de La Esquina de las Flores.</h1>
-                </div>
+            </div>
                 
-                <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row justify-content-between">
-                                    @foreach ($products as $product)
-                                    <div class="col-4 col-lg-2 py-3">
-                                        <div class="product box rounded-lg shadow-lg h-100 text-center">
-                                            <img src="{{URL::asset("img/productos/{$product->img}.jpg")}}"" alt="" class="img-fluid">
-                                            <h5 class="card-title text-white">{{$product->name}}</h5>
-                                            <hr class="mx-5 d-none d-lg-flex">
-                                            <p class="card-text text-white d-none d-lg-inline">{{$product->description}}</p>
-                                        </div>
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row justify-content-between">
+                                @foreach ($products as $product)
+                                <div class="col-4 col-lg-2 py-3">
+                                    <div class="product box rounded-lg shadow-lg h-100 text-center">
+                                        <img src="{{URL::asset("img/productos/{$product->img}.jpg")}}"" alt="" class="img-fluid">
+                                        <h5 class="card-title text-white">{{$product->name}}</h5>
+                                        <hr class="mx-5 d-none d-lg-flex">
+                                        <p class="card-text text-white d-none d-lg-inline">{{$product->description}}</p>
                                     </div>
-                                    @endforeach
                                 </div>
+                                @endforeach
                             </div>
                         </div>
-                        
-                        <a name="" id="buttonGreen" class="btn btn-block rounded-pill shadow-lg" href="/productos" role="button"><h4 class="phrase">Ver mas productos</h4></a>
-                        
                     </div>
+                        
+                    <a name="" id="buttonGreen" class="btn btn-block rounded-pill shadow-lg" href="/productos" role="button"><h4 class="phrase">Ver mas productos</h4></a>
+                        
                 </div>
             </div>
+        </div>
     </div>
         
         {{------------------Pedidos------------------}}
         
-        <div id="pedidos">
-            <div class="container text-center text-white mt-4">
-                <div class="row d-md-none"> {{-- MOBILE --}}
-                    <div class="col-12 mb-1">
-                        <div class="rounded-top-both p-3" id="pedidosYa">
-                            <h1>Encontranos en</h1>
-                            <a href="https://www.pedidosya.com.ar/restaurantes/lomas-de-zamora/casa-de-comidas-saludable-vegetariana-menu"><img src="/img/pedidosya.png" alt="" class=" img-fluid logo"></a>
-                            <h4>Buscanos por el nombre de</h4>
-                            <h2>Casa de Comida Saludable</h2>
-                            
-                        </div>
+    <div id="pedidos">
+        <div class="container text-center text-white mt-4">
+            <div class="row d-md-none"> {{-- MOBILE --}}
+                <div class="col-12 mb-1">
+                    <div class="rounded-top-both p-3" id="pedidosYa">
+                        <h1>Encontranos en</h1>
+                        <a href="https://www.pedidosya.com.ar/restaurantes/lomas-de-zamora/casa-de-comidas-saludable-vegetariana-menu"><img src="/img/pedidosya.png" alt="" class=" img-fluid logo"></a>
+                        <h4>Buscanos por el nombre de</h4>
+                        <h2>Casa de Comida Saludable</h2>    
                     </div>
-                    <div class="col-12">
-                        <div class="rounded-bottom-both p-3" id="entregas">
-                            <h4>Podes comunicarte con nosotros llamandonos al</h3>
-                                <h2>4244 5048</h2>
-                                <h4>o via Whatsapp al</h3>
-                                    <h2>+54 11 41937119</h2>
-                                    <hr class="mx-3">
-                                    <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-12">
+                    <div class="rounded-bottom-both p-3" id="entregas">
+                        <h4>Podes comunicarte con nosotros llamandonos al</h3>
+                        <h2>4244 5048</h2>
+                        <h4>o via Whatsapp al</h3>
+                        <h2>+54 11 41937119</h2>
+                        <hr class="mx-3">
+                        <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
+                    </div>
+                </div>
+            </div>
                         
-                        <div class="d-none d-md-flex row"> {{-- DESKTOP --}}
-                            <div class="col-8 px-1">
-                                <div class="rounded-left-both h-100 p-3" id="pedidosYa">
-                                    <h1>Encontranos en</h1>
-                                    <a href="https://www.pedidosya.com.ar/restaurantes/lomas-de-zamora/casa-de-comidas-saludable-vegetariana-menu" target="_blank"><img src="/img/pedidosya.png" alt="" class=" img-fluid logo"></a>
-                                    <h4>Buscanos por el nombre de</h4>
-                                    <h2>Casa de Comida Saludable</h2>
-                                </div>
-                            </div>
-                            <div class="col-4 px-1">
-                                <div class="rounded-right-both h-100 p-3 d-flex justify-content-center flex-column" id="entregas">
-                                    <h4>Podes comunicarte con nosotros llamandonos al</h3>
-                                        <h2>4244 5048</h2>
-                                        <h4>o via Whatsapp al</h3>
-                                            <h2>+54 11 41937119</h2>
-                                            <hr class="mx-3">
-                                            <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="d-none d-md-flex row"> {{-- DESKTOP --}}
+                <div class="col-8 px-1">
+                    <div class="rounded-left-both h-100 p-3" id="pedidosYa">
+                        <h1>Encontranos en</h1>
+                        <a href="https://www.pedidosya.com.ar/restaurantes/lomas-de-zamora/casa-de-comidas-saludable-vegetariana-menu" target="_blank"><img src="/img/pedidosya.png" alt="" class=" img-fluid logo"></a>
+                        <h4>Buscanos por el nombre de</h4>
+                        <h2>Casa de Comida Saludable</h2>
+                    </div>
+                </div>
+                <div class="col-4 px-1">
+                    <div class="rounded-right-both h-100 p-3 d-flex justify-content-center flex-column" id="entregas">
+                        <h4>Podes comunicarte con nosotros llamandonos al</h3>
+                        <h2>4244 5048</h2>
+                        <h4>o via Whatsapp al</h3>
+                        <h2>+54 11 41937119</h2>
+                        <hr class="mx-3">
+                        <p>Hacemos entregas hasta 10 cuadras a la redonda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                         
      {{------------------Consultas------------------}}
                         
-                        <div id="consultas">
-                            <div class="container text-center text-white mt-4">
-                                <div class="row d-md-none"> {{-- MOBILE --}}
-                                    <div class="col-12 mb-1">
-                                        <div class="rounded-top-both p-3" id="contactInfo">
-                                            <h2>¡Dejanos tu mensaje!</h2>
-                                            <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
-                                            <a href="https://www.facebook.com/conproductosdelaesquinadelasflores/" class="shadow-lg" target="_blank"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
-                                            <a href="https://www.instagram.com/casadecomidasaludable/" class="shadow-lg" target="_blank"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="rounded-bottom-both p-3" id="contactForm">
-                                                <form action="" class="mx-5">
-                                                        <div class="form-group">
-                                                                <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
-                                                        </div>
-                                                        <div class="form-group">
-                                                                <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
-                                                        </div>
-                                                        <div class="form-group">
-                                                                <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
-                                                </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="d-none d-md-flex row"> {{-- DESKTOP --}}
-                                    <div class="col-4 px-1">
-                                        <div class="rounded-left-both h-100 p-3 d-flex justify-content-center flex-column" id="contactInfo">
-                                            <div class="">
-                                                <h2>¡Dejanos tu mensaje!</h2>
-                                                <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
-                                                <a href="https://www.facebook.com/conproductosdelaesquinadelasflores/" class="shadow-lg" target="_blank"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
-                                                <a href="https://www.instagram.com/casadecomidasaludable/" class="shadow-lg" target="_blank"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                    <div class="col-8 px-1">
-                                        <div class="rounded-right-both h-100 p-3" id="contactForm">
-                                            <form action="" class="mx-5">
-                                                <div class="form-group">
-                                                        <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
-                                                </div>
-                                                <div class="form-group">
-                                                        <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
-                                                </div>
-                                                <div class="form-group">
-                                                        <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
-                                                </div>
-                                                <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
-                                        </form>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
+    <div id="consultas">
+        <div class="container text-center text-white mt-4">
+            <div class="row d-md-none"> {{-- MOBILE --}}
+                <div class="col-12 mb-1">
+                    <div class="rounded-top-both p-3" id="contactInfo">
+                        <h2>¡Dejanos tu mensaje!</h2>
+                        <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
+                        <a href="https://www.facebook.com/conproductosdelaesquinadelasflores/" class="shadow-lg" target="_blank"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
+                        <a href="https://www.instagram.com/casadecomidasaludable/" class="shadow-lg" target="_blank"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="rounded-bottom-both p-3" id="contactForm">
+                        <form action="" class="mx-5">
+                            <div class="form-group">
+                                <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
                             </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                
+            <div class="d-none d-md-flex row"> {{-- DESKTOP --}}
+                <div class="col-4 px-1">
+                    <div class="rounded-left-both h-100 p-3 d-flex justify-content-center flex-column" id="contactInfo">
+                        <div class="">
+                            <h2>¡Dejanos tu mensaje!</h2>
+                            <h4>Tambien podes encontrarnos en nuestras redes sociales</h4>
+                            <a href="https://www.facebook.com/conproductosdelaesquinadelasflores/" class="shadow-lg" target="_blank"><i class="fab fa-facebook-f fab-mini align-middle m-2"></i></a>
+                            <a href="https://www.instagram.com/casadecomidasaludable/" class="shadow-lg" target="_blank"><i class="fab fa-instagram fab-mini align-middle m-2"></i></a>
                         </div>
+                    </div>
+                </div>  
+                <div class="col-8 px-1">
+                    <div class="rounded-right-both h-100 p-3" id="contactForm">
+                        <form action="" class="mx-5">
+                            <div class="form-group">
+                                <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
+                        </form>
+                    </div>
+                                        
+                </div>
+            </div>
+        </div>
+    </div>
                         
                         
                         
                         
                         
                         
-                        <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-                        {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
+    <script src="{{ URL::asset('js/jquery-3.3.1.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
                         
+    <script src="{{ URL::asset('slick/slick.min.js') }}"></script>    
+    <script src="{{ URL::asset('js/pages.js') }}"></script>
                         
-                        <script src="{{ URL::asset('slick/slick.min.js') }}"></script>    
-                        <script src="{{ URL::asset('js/pages.js') }}"></script>
-                        
-                        <script type="text/javascript">
-                            
-                        </script>
-                        
-                    </body>
+</body>
                     
-                    </html>
+</html>
