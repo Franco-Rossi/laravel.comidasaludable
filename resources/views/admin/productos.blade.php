@@ -11,7 +11,6 @@
                     <th>Producto</th>
                     <th>Descripcion</th>
                     <th>Keywords</th>
-                    <th>Precio</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -20,7 +19,6 @@
                         <td><a href="/admin/productos/{{$product->id}}">{{$product->name}}</a></td>
                         <td>{{$product->description}}</td>
                         <td>{{$product->keywords}}</td>
-                        <td>${{$product->price}}</td>
                     </tr>
                     @endforeach
                 </tbody>

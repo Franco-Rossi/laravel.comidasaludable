@@ -47,7 +47,7 @@
         @foreach($products as $product)
         <div class="col-6 col-sm-4 col-lg-2 mb-5">
             <div class="card text-center shadow h-100">
-                <img src="img/productos/{{$product->img}}.jpg" alt="" class="card-img-top img-fluid">
+                <img src="{{url('img/productos/'.$product->filename)}}" alt="" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h5 class="card-title">{{$product->name}}</h5>
                     <hr class="mx-5 d-none d-lg-flex">

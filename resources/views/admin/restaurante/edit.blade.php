@@ -5,7 +5,7 @@
     <div class="card">
         <h5 class="card-header">Modificando el articulo <span class="font-weight-bold">{{$food->name}}</span></h5>
         <div class="card-body">
-            <form method="POST" action="/admin/restaurante/{{$food->id}}">
+            <form method="POST" action="/admin/restaurante/{{$food->id}}" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
                 <div class="form-group">
@@ -17,16 +17,12 @@
                     <textarea name="description" id="description" class="form-control" rows="5" placeholder="Ingrese una descripcion">{{$food->description}}</textarea>
                 </div>
                 <div class="form-group">
-                    <label for="img">Nombre de la imagen</label>
-                    <input type="text" class="form-control" name='img' id="img" placeholder="Ingrese el nombre de la imagen" value="{{$food->img}}">
+                    <label for="img">Imagen</label>
+                    <input type="file" class="form-control border-0" name="img" >
                 </div>
                 <div class="form-group">
                     <label for="type">Tipo</label>
                     <input type="number" class="form-control" name='type' id="type" placeholder="Ingrese el tipo de plato" value="{{$food->type}}">
-                </div>
-                <div class="form-group">
-                    <label for="price">Precio</label>
-                    <input type="number" class="form-control" name='price' id="price" placeholder="Ingrese el precio" value="{{$food->price}}">
                 </div>
                 <button type="submit" class="btn btn-success btn-lg">Modificar articulo</button>
             </form>

@@ -237,44 +237,6 @@ div.grow a div p, div.grow a div h2{
   }
 
 
-
-/**********************NAVBAR**********************/
-
-.navbar-light {
-    background-color: #0ca7a9;
-    box-shadow: 0 0.125rem 0.25rem 0 rgba(58, 59, 69, 0.2) !important;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar-light .navbar-brand,
-.navbar-light .navbar-text {
-    color: rgb(255, 255, 255);
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(255, 255, 255);
-}
-
-.navbar-light .nav-item.active .nav-link,
-.navbar-light .nav-item:focus .nav-link,
-.navbar-light .nav-item:hover .nav-link {
-    color: #ffffff93;
-}
-
-  .navbar-light .navbar-toggler {
-    color: rgb(255, 255, 255);
-    border-color: rgba(255, 255, 255, 0);
-  }
-  
-  .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-
-  .text-white{
-    text-shadow: 4px 2px 9px rgba(0,0,0,0.47);
-  }
-
   #buttonGreen{
     padding: 10px;
     background-color: #0ca933 !important;
@@ -317,9 +279,53 @@ div.grow a div p, div.grow a div h2{
 
   #contactForm{
     background-color: #0ca6a999;
-    
-
   }
+
+
+/**********************NAVBAR**********************/
+
+.navbar-light {
+    background-color: #0ca7a9;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(58, 59, 69, 0.2) !important;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-text {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-light .nav-item.active .nav-link,
+.navbar-light .nav-item:focus .nav-link,
+.navbar-light .nav-item:hover .nav-link {
+    color: #ffffff93;
+}
+
+  .navbar-light .navbar-toggler {
+    color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0);
+  }
+  
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .text-white{
+    text-shadow: 4px 2px 9px rgba(0,0,0,0.47);
+  }
+
+
+  /**********************OTHERS**********************/
+
+  .img-producto{
+      height: 250px !important;
+  }
+  
 
 
   

@@ -111,7 +111,7 @@
                 <div class="slideShow container-fluid">
                     @foreach ($foods as $food)
                     @if ($food->type === 0)
-                    <div><img src="{{URL::asset("img/comida/{$food->img}.jpg")}}"" alt="" class="img-fluid shadow food rounded-lg"> </div>
+                    <div><img src="{{url('img/comida/'.$food->filename)}}" alt="" class="img-fluid shadow food rounded-lg"> </div>
                     @endif
                     @endforeach
                 </div>
@@ -119,7 +119,7 @@
                 <div class="slideShow container">
                     @foreach ($foods as $food)
                     @if ($food->type === 1)
-                    <div><img src="{{URL::asset("img/comida/{$food->img}.jpg")}}"" alt="" class="img-fluid shadow food rounded-lg"></div>
+                    <div><img src="{{url('img/comida/'.$food->filename)}}" alt="" class="img-fluid shadow food rounded-lg"></div>
                     @endif
                     @endforeach
                 </div>
@@ -127,7 +127,7 @@
                 <div class="slideShow container">
                     @foreach ($foods as $food)
                     @if ($food->type === 2)
-                    <div><img src="{{URL::asset("img/comida/{$food->img}.jpg")}}"" alt="" class="img-fluid shadow food rounded-lg"></div>
+                    <div><img src="{{url('img/comida/'.$food->filename)}}" alt="" class="img-fluid shadow food rounded-lg"></div>
                     @endif
                     @endforeach
                 </div>
@@ -151,7 +151,7 @@
                                 @foreach ($products as $product)
                                 <div class="col-4 col-lg-2 py-3">
                                     <div class="product box rounded-lg shadow-lg h-100 text-center">
-                                        <img src="{{URL::asset("img/productos/{$product->img}.jpg")}}"" alt="" class="img-fluid">
+                                        <img src="{{url('img/productos/'.$product->filename)}}" alt="" class="img-fluid">
                                         <h5 class="card-title text-white">{{$product->name}}</h5>
                                         <hr class="mx-5 d-none d-lg-flex">
                                         <p class="card-text text-white d-none d-lg-inline">{{$product->description}}</p>

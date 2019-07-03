@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Food;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class FoodsController extends Controller
 {
@@ -34,12 +36,34 @@ class FoodsController extends Controller
     }
 
     public function update($id){
+
         $food = Food::findOrFail($id);
+
+        request()->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'type' => 'required',
+        ]);
+
+        if(request('img') != null){
+            $img_name = request()->file('img');
+            $extension = $img_name->getClientOriginalExtension();
+            Storage::disk('public_food')->put($img_name->getFilename().'.'.$extension,  File::get($img_name));
+
+            
+            $foodImage = public_path("/img/comida/{$food->filename}");
+            if(file_exists($foodImage)){
+                unlink($foodImage);
+            }
+
+            
+            $food->mime = $img_name->getClientMimeType();
+            $food->original_filename = $img_name->getClientOriginalName();
+            $food->filename = $img_name->getFilename().'.'.$extension;
+        }
 
         $food->name = request('name');
         $food->description = request('description');
-        $food->img = request('img');
-        $food->price = request('price');
         $food->type = request('type');
 
         $food->save();

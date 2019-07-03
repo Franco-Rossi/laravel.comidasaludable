@@ -43,7 +43,7 @@ class ProductsController extends Controller
         ]);
 
         if(request('img') != null){
-             $img_name = request()->file('img');
+            $img_name = request()->file('img');
             $extension = $img_name->getClientOriginalExtension();
             Storage::disk('public_product')->put($img_name->getFilename().'.'.$extension,  File::get($img_name));
 

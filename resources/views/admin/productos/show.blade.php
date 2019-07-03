@@ -7,7 +7,7 @@
         <div class="card-body">
             <h1>{{$product->name}}</h1>
             <p>{{$product->description}}</p>
-            <img src="{{url('img/productos/'.$product->filename)}}" alt="" class="img-producto">
+            <img src="{{url('img/productos/'.$product->filename)}}" alt="" class="img-producto img-fluid">
             <p>{{$product->keywords}}</p>
         </div>
     </div>

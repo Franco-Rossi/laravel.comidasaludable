@@ -17,9 +17,9 @@
                     <textarea name="description" id="description" class="form-control" rows="5" placeholder="Ingrese una descripcion">{{$product->description}}</textarea>
                 </div>
                 <div class="form-group">
-                        <label for="img">Imagen</label>
-                        <input type="file" class="form-control border-0" name="img" >
-                    </div>  
+                    <label for="img">Imagen</label>
+                    <input type="file" class="form-control border-0" name="img" >
+                </div>  
                 <div class="form-group">
                     <label for="keywords">Keywords</label>
                     <input type="text" class="form-control" name='keywords' id="keywords" placeholder="Ingrese las palabras clave, separadas por una coma" value="{{$product->keywords}}">

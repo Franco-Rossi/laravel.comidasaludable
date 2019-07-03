@@ -13,7 +13,6 @@
                     <th>Articulo de Restaurante</th>
                     <th>Descripcion</th>
                     <th>Tipo</th>
-                    <th>Precio</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -22,7 +21,6 @@
                         <td><a href="/admin/restaurante/{{$food->id}}">{{$food->name}}</a></td>
                         <td>{{$food->description}}</td>
                         <td>{{$food->type}}</td>
-                        <td>${{$food->price}}</td>
                     </tr>
                 @endforeach
                 </tbody>
