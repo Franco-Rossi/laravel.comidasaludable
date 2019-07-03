@@ -14,6 +14,7 @@
 Route::get('/', 'PagesController@home');
 Route::get('/restaurante', 'PagesController@restaurante');
 Route::get('/productos', 'PagesController@productos');
+Route::any('/search', 'PagesController@search');
 Route::get('/pedidos', 'PagesController@pedidos');
 Route::get('/consultas', 'PagesController@consultas');
 

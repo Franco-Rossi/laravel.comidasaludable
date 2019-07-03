@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Food;
-use App\Image;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class PagesController extends Controller
 {
@@ -20,26 +20,32 @@ class PagesController extends Controller
     public function restaurante()
     {
         $foods = Food::all();
-        return view('restaurante', compact('foods', 'images'));
+        return view('restaurante', compact('foods'));
     }
 
     public function productos()
     {
-        $images = Image::all();
-        $products = Product::all();
-        return view('productos', compact('products', 'images'));
+        $products = DB::table('products')->paginate(6);
+        return view('productos', compact('products'));
     }
+
+    public function search(Request $request){
+
+            $q = Input::get ( 'q' );
+            $products = Product::where('name','LIKE','%'.$q.'%')->orWhere('description','LIKE','%'.$q.'%')->orWhere('keywords','LIKE','%'.$q.'%')->paginate(6);
+            if(count($products) > 0)
+                return view('productos', compact('products'));
+            else return view ('productos')->withMessage('No se ha encontrado ningun producto, por favor busque de nuevo.');
+        }
 
     public function pedidos()
     {
-        $images = Image::all();
-        return view('pedidos', compact('images'));
+        return view('pedidos');
     }
 
     public function consultas()
     {
-        $images = Image::all();
-        return view('consultas', compact('images'));
+        return view('consultas');
     }
 
 }
