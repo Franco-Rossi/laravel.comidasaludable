@@ -21,4 +21,6 @@ Route::get('admin', 'AdminController@index')->name('admin');
 Route::resource('admin/productos', 'ProductsController');
 Route::resource('admin/restaurante', 'FoodsController');
 
+Route::post('/contact-us','ContactUsController@contactUsPost');
+
 

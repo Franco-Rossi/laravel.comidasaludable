@@ -221,6 +221,11 @@
                         
     <div id="consultas">
         <div class="container text-center text-white mt-4">
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                  {{ Session::get('success') }}
+                </div>
+             @endif
             <div class="row d-md-none"> {{-- MOBILE --}}
                 <div class="col-12 mb-1">
                     <div class="rounded-top-both p-3" id="contactInfo">
@@ -232,15 +237,16 @@
                 </div>
                 <div class="col-12">
                     <div class="rounded-bottom-both p-3" id="contactForm">
-                        <form action="" class="mx-5">
+                        <form method="POST" action="/contact-us" class="mx-5">
+                            {{  csrf_field() }}
                             <div class="form-group">
-                                <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
+                                <input type="text" class="form-control shadow-lg" name="name" id="name" placeholder="Nombre">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
+                                <input type="email" class="form-control shadow-lg" name="email" id="email" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                                <textarea class="form-control shadow-lg" name="message" id="message" rows="7" placeholder="Ingrese su mensaje"></textarea>
                             </div>
                             <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
                         </form>
@@ -261,15 +267,16 @@
                 </div>  
                 <div class="col-8 px-1">
                     <div class="rounded-right-both h-100 p-3" id="contactForm">
-                        <form action="" class="mx-5">
+                        <form method="POST" action="/contact-us" class="mx-5">
+                            {{  csrf_field() }}
                             <div class="form-group">
-                                <input type="text" class="form-control shadow-lg" id="formGroupExampleInput" placeholder="Nombre">
+                                <input type="text" class="form-control shadow-lg" name="name" id="name" placeholder="Nombre">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control shadow-lg" id="formGroupExampleInput2" placeholder="Email">
+                                <input type="email" class="form-control shadow-lg" name="email" id="email" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control shadow-lg" id="exampleFormControlTextarea1" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                                <textarea class="form-control shadow-lg" name="message" id="message" rows="7" placeholder="Ingrese su mensaje"></textarea>
                             </div>
                             <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
                         </form>
