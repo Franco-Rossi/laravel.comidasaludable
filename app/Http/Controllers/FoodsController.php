@@ -74,7 +74,9 @@ class FoodsController extends Controller
 
     public function destroy($id){
 
-        Food::findOrFail($id)->delete();
+        $food = Food::findOrFail($id);
+        unlink(public_path("/img/comida/{$food->filename}"));
+        $food->delete();
 
         return redirect('/admin/restaurante');
     }

@@ -9,15 +9,15 @@
                 {{  csrf_field() }}
                 <div class="form-group">
                     <label for="name">Nombre del producto</label>
-                    <input type="text" class="form-control" name='name' id="name" placeholder="Ingrese el producto">
+                    <input type="text" class="form-control" name='name' id="name" placeholder="Ingrese el producto" required>
                 </div>
                 <div class="form-group">
                     <label for="description">Descripcion del producto</label>
-                    <textarea name="description" id="description" class="form-control" rows="5" placeholder="Ingrese una descripcion"></textarea>
+                    <textarea name="description" id="description" class="form-control" rows="5" placeholder="Ingrese una descripcion" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="img">Imagen</label>
-                    <input type="file" class="form-control border-0" name="img" >
+                    <input type="file" class="form-control border-0" name="img" required>
                 </div>  
                 <div class="form-group">
                     <label for="keywords">Keywords</label>

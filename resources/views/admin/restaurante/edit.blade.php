@@ -26,7 +26,7 @@
                 </div>
                 <button type="submit" class="btn btn-success btn-lg">Modificar articulo</button>
             </form>
-            <form method="POST" action="/admin/comida/{{$food->id}}">
+            <form method="POST" action="/admin/restaurante/{{$food->id}}">
                 @method('DELETE')
                 @csrf
                 <button type="submit" class="btn btn-danger mt-2">Eliminar articulo</button>

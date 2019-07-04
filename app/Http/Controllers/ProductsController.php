@@ -70,7 +70,9 @@ class ProductsController extends Controller
 
     public function destroy($id){
 
-        Product::find($id)->delete();
+        $product = Product::findOrFail($id);
+        unlink(public_path("/img/productos/{$product->filename}"));
+        $product->delete();
 
         return redirect('/admin/productos');
     }
