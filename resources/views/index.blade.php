@@ -36,7 +36,7 @@
         </a>
         <a href="#about" style="background-color:#0ca7a9;">
             <div>
-                <img src="/img/logo.png" alt="" class="logo">
+                <img src="/img/logo3.png" alt="" class="logo">
                 <p>Restaurant natural y almacén organico, sabe mas de nosotros!</p>
             </div>
         </a>
@@ -240,13 +240,13 @@
                         <form method="POST" action="/contact-us" class="mx-5">
                             {{  csrf_field() }}
                             <div class="form-group">
-                                <input type="text" class="form-control shadow-lg" name="name" id="name" placeholder="Nombre">
+                                <input type="text" class="form-control shadow-lg" name="name" id="name" placeholder="Nombre" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control shadow-lg" name="email" id="email" placeholder="Email">
+                                <input type="email" class="form-control shadow-lg" name="email" id="email" placeholder="Email" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control shadow-lg" name="message" id="message" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                                <textarea class="form-control shadow-lg" name="message" id="message" rows="7" placeholder="Ingrese su mensaje" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
                         </form>
@@ -270,13 +270,13 @@
                         <form method="POST" action="/contact-us" class="mx-5">
                             {{  csrf_field() }}
                             <div class="form-group">
-                                <input type="text" class="form-control shadow-lg" name="name" id="name" placeholder="Nombre">
+                                <input type="text" class="form-control shadow-lg" name="name" id="name" placeholder="Nombre" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control shadow-lg" name="email" id="email" placeholder="Email">
+                                <input type="email" class="form-control shadow-lg" name="email" id="email" placeholder="Email" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control shadow-lg" name="message" id="message" rows="7" placeholder="Ingrese su mensaje"></textarea>
+                                <textarea class="form-control shadow-lg" name="message" id="message" rows="7" placeholder="Ingrese su mensaje" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-block shadow-lg border" id="buttonCyan"><h2 class="phrase">Enviar</h2></button>
                         </form>
