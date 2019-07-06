@@ -225,7 +225,7 @@
                 <div class="alert alert-success">
                   {{ Session::get('success') }}
                 </div>
-             @endif
+                @endif
             <div class="row d-md-none"> {{-- MOBILE --}}
                 <div class="col-12 mb-1">
                     <div class="rounded-top-both p-3" id="contactInfo">
